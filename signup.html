@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXooqM0rHAbnRaQWiBRYiCc74iH85oAmzI0g&usqp=CAU);
+  background-size: cover;
+  background-position:center center;
+  background-attachment: fixed;
+}
+* {box-sizing: border-box}
+
+form {
+  border: 3px solid #f1f1f1;
+  width:400px;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0,0.7);
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+ background: url();
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 10px;
+ 
+}
+
+button:hover {
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0,0.7);
+ 
+
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+
+
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<body>
+
+<form action="{{ url_for('signup')}}" class="animate__animated animate__fadeInUp" style="border:1px solid #ccc" method="post">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>

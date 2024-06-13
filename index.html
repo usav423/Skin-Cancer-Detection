@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <style>
+        /* body {
+            background-image: url(https://img.graphicsurf.com/2020/10/skin-disease-vector-design-concept.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+
+
+        } */
+
+        .form-box {
+            position: relative;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-top: 100px;
+
+
+        }
+
+        form {
+            position: relative;
+            padding: 20px;
+
+
+        }
+
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.2);
+
+        }
+
+        input:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+
+
+        }
+
+        label {
+            color: #fff;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+</head>
+
+<body>
+
+<div class="container animate__animated animate__zoomIn mt-5">
+    <div class="row">
+        <div class="col-6">
+            <img src="https://img.freepik.com/free-vector/flat-woman-face-with-skin-diseases-rashes-acne-dermatology-problems-dermatologist-cosmetology-doctor-with-magnifier-glass-examining-huge-female-head-with-facial-dermatitis-redness-pimples_88138-877.jpg" class="img-fluid" alt="">
+
+        </div>
+        <div class="col-6 ">
+            <div class="form-box   shadow-lg">
+                <form action="{{ url_for('Upload') }}" method='POST' enctype="multipart/form-data">
+                    <h1 class="diaplay-5  text-center">Skin  Classification</h1>
+                    <input class="form-control mb-3" type="file" class="image_input" id='image' name='image'>
+                    <input class="btn btn-outline-primary form-control" type="submit" value="Submit">
+                </form>
+        
+            </div>
+        
+
+        </div>
+
+    </div>
+
+</div>
+
+  
+
+</body>
+
+</html>
